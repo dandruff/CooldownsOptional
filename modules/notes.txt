@@ -1,0 +1,14 @@
+-- Create A Timer
+local candy = LibStub("LibCandyBar-3.0")
+local texture = [[Interface\TargetingFrame\UI-StatusBar]]
+local mybar = candy:New(texture, 400, 32)
+local icon = select(3, GetSpellInfo(139))
+mybar:SetParent(UIParent)
+mybar:SetPoint("CENTER")
+mybar:SetLabel("Yay!")
+mybar:SetIcon(icon)
+mybar.candyBarLabel:SetJustifyH("LEFT")
+mybar:SetDuration(10)
+mybar:Start()
+
+print("Started Timer")
